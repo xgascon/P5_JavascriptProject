@@ -17,7 +17,7 @@ request2.onreadystatechange = function(){
         camera_name.innerHTML = response.name;
         camera_img.src = response.imageUrl;
         camera_desc.innerHTML = response.description;
-        camera_price.innerHTML = "Price : "+Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(response.price/100);
+        camera_price.innerHTML = "Prix : "+Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(response.price/100);
         
         let lenses = response.lenses;
         lenses.forEach(lense => {
@@ -44,14 +44,16 @@ clic.addEventListener('click', function() {
     } else {
         
         if(typeof localStorage!='undefined') {
-            let idArray = [];
+            let idArray = [];            
             if(localStorage.getItem("products")) {
-                idArray = (JSON.parse(localStorage.getItem("products"))); 
+                idArray = JSON.parse(localStorage.getItem("products"));
                 addId(id, idArray);              
-                alert("Produit supplémentaire ajouté à votre Panier !");                
+                alert("Produit supplémentaire ajouté à votre Panier !");   
+                window.location.href = "panier.html";             
             } else { 
                 addId(id, idArray);
-                alert("Produit ajouté dans votre Panier !");                                 
+                alert("Produit ajouté dans votre Panier !"); 
+                window.location.href = "panier.html";                                 
             }
             
             function addId(id, idArray) {

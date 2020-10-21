@@ -25,14 +25,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="index.html" target="_blank">Accueil</a>
                                 </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Détails des produits</a>
-                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="panier.html" target="_blank">Mon Panier</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="confirmation.html" target="_blank">Confirmation de commande</a>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Confirmation de commande</a>
                                 </li>
                             </ul>
                         </div>    
@@ -55,31 +52,18 @@
             <div class="row" id="produits">
                 <div class="col-12 mx-auto">
                     <div class="card shadow my-4 py-4">
-                        <h2 class="card-title text-center" id="camera_name">
+                        <h2 class="h4 card-title text-center" id="camera_name">
+                            Confirmation de votre commande :
                         </h2>
-                        <p class="card-text text-center">
-                            <img src="" alt="" width="60%" id="camera_img">
+                        <p id="orderId_title" class="card-text text-left mx-4 text-primary">
+                            <ins>Numéro de commande :</ins>                             
                         </p>
-                        <p class="card-text text-center mx-2 font-italic" id="camera_desc">
+                        <p id="orderId" class="card-text text-left mx-4"></p>
+                        <p id="totalPrice_title" class="card-text text-left mx-4 text-primary">
+                            <ins>Total de votre commande :</ins>                            
                         </p>
-                        <p class="card-text text-center mx-2" id="camera_price">
-                        </p>  
-                        <div class="column-center">                     
-                            <form class="form-group card-text text-left mx-5">
-                                <label for="camera_lenses">Lentilles</label>
-                                <select id="camera_lenses" class="form-control">
-                                    <option value="">Choisissez votre lentille...</option>                                                                                      
-                                </select>
-                                </br>
-                                
-                            </form>                            
-                            
-                            <p class="card-text text-right mx-5 inline">
-                                <input id="clic" type="submit" value="Ajouter au Panier">                                    
-                                <img src="images/cart.png" class="img-cart">                                
-                            </p> 
-                                                         
-                        </div>                                               
+                        <p id="totalPrice" class="card-text text-left mx-4"></p>
+                                                                                          
                     </div>
 
                 </div>
@@ -115,7 +99,7 @@
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-        <script type="text/javascript" src="produits.js"></script>
+        <script type="text/javascript" src="confirmation.js"></script>
 
     </body>
 

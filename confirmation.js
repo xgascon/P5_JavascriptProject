@@ -3,7 +3,7 @@ if(typeof localStorage!='undefined') {
     const orderId_title = document.getElementById("orderId_title");
     const totalPrice = document.getElementById("totalPrice");
     const totalPrice_title = document.getElementById("totalPrice_title");
-    
+    const remerciement = document.getElementById("remerciement");
 
     if(localStorage.getItem("orderId")){
         orderId.innerHTML = localStorage.getItem("orderId");
@@ -12,6 +12,7 @@ if(typeof localStorage!='undefined') {
         orderId.remove();
         totalPrice_title.remove();
         totalPrice.remove();
+        remerciement.remove();
         
         orderId_title.innerHTML = "Votre commande est vide, ";
         orderId_title.className ="card-text mx-2 my-4 text-center";

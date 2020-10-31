@@ -42,6 +42,12 @@ body {
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 
+.page-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 footer {
   font-family: "Montserrat";
   color: white;
@@ -55,6 +61,10 @@ footer {
 
 .inline {
   display: inline-block;
+}
+
+.image {
+  width: 60%;
 }
 
 .img-cart {

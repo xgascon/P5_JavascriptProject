@@ -21,7 +21,7 @@ let retrieveAPI = function (url) {
 }
   
 // L'appel à la fonction
-retrieveAPI('http://localhost:3000/api/cameras')
+retrieveAPI('http://oc-p5-api.herokuapp.com/api/cameras')
 .then(function (response1) {
 
 var response = JSON.parse(response1);

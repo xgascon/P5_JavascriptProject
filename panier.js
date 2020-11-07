@@ -57,7 +57,7 @@ if(typeof localStorage!='undefined') {
                 }            
             }
     
-            request3.open("GET", "http://oc-p5-api.herokuapp.com/api/cameras/"+item);  
+            request3.open("GET", "https://oc-p5-api.herokuapp.com/api/cameras/"+item);  
             request3.send();        
         
         })   
@@ -105,7 +105,7 @@ if(typeof localStorage!='undefined') {
 
                 // Requête POST pour envoyer les données et générer un n° de commande
                 var request4 = new XMLHttpRequest();
-                request4.open("POST", "http://oc-p5-api.herokuapp.com/api/cameras/order");
+                request4.open("POST", "https://oc-p5-api.herokuapp.com/api/cameras/order");
                 request4.setRequestHeader("Content-Type","application/json");
                 request4.send(dataEnvoi);
                 request4.onreadystatechange = function(){

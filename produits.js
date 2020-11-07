@@ -34,7 +34,7 @@ request2.onreadystatechange = function(){
     }
 };
 
-request2.open("GET", "http://oc-p5-api.herokuapp.com/api/cameras/"+id);
+request2.open("GET", "https://oc-p5-api.herokuapp.com/api/cameras/"+id);
 request2.send();
 
 // Réaction au clic du bouton "Ajouter au panier"

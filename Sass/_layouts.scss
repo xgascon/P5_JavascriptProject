@@ -15,21 +15,50 @@ h2 {
     };
 }
 
-h4 {
+h4, .h4 {
     @media all and (max-width:577px){
-        font-size: 1.0em;
+        font-size: 1.2em;
     };
 }
 
 body, .card-text, .nav-link, option, .form-control {
     @media all and (max-width:577px){
-        font-size: 0.7em;
+        font-size: 0.9em;
     };
+}
+
+.text-primary {
+    color: $second-color-site;
+}
+
+.btn {
+    @media all and (max-width:577px){
+        font-size: 1.0em;
+    };
+}
+
+.btn-primary {
+    background-color: $second-color-site;
+    border-color: $second-color-site;
+}
+
+.btn-secondary {
+    background-color: white;
+    border-color: $second-color-site;
+    color: $second-color-site;
+    // transform: rotate(10deg);
+    // transform-origin: 50% 0%;
+    // animation: alarm 1s alternate infinite;
+    animation: wriggle 2s alternate infinite; 
+    &:hover {
+        background-color: white;        
+    }
 }
 
 .jumbotron {
     background-image: url(../images/vcam_2.jpg);
-    background-size: 15%;
+    background-position: 0% 20%;
+    background-size: 100%;
     color: white;
     text-shadow: black 0.1em 0.1em 0.2em;
 }
@@ -43,6 +72,14 @@ body, .card-text, .nav-link, option, .form-control {
 footer {
     font-family: "Montserrat";
     color: white;
+}
+
+.line-center {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;    
 }
 
 .column-center {

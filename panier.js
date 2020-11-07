@@ -2,6 +2,7 @@ if(typeof localStorage!='undefined') {
 
     // Définition de constantes
     const id_panier = document.getElementById("id-panier");
+    const panier_spot = document.getElementById("panier-spot");
     const clear = document.getElementById("clear");  
     const total_panier = document.getElementById("total");
     const contact_button = document.getElementById("contact_button");   
@@ -47,7 +48,7 @@ if(typeof localStorage!='undefined') {
                     
                     itemPhoto.setAttribute("src", response.imageUrl);
                     itemPhoto.setAttribute("alt", "camera "+response.name);
-                    itemPhoto.setAttribute("width", "10%");                  
+                    itemPhoto.setAttribute("width", "50%");                  
                     itemName.innerHTML = response.name;                        
                     itemPrice.innerHTML = "Prix : "+Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(response.price/100);          
                           
@@ -124,6 +125,7 @@ if(typeof localStorage!='undefined') {
         });    
  
     } else {
+        panier_spot.remove();
         total_panier.innerHTML = "Votre panier est vide";
     }    
 

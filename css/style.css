@@ -6,9 +6,37 @@
   font-family: "Montserrat";
   src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
 }
+@keyframes wriggle {
+  0% {
+    transform: translateX(1%) translateY(-2%) rotate(2deg);
+  }
+  33% {
+    transform: translateX(-1%) translateY(2%) rotate(-2deg);
+  }
+  66% {
+    transform: translateX(1%) translateY(2%) rotate(2deg);
+  }
+  100% {
+    transform: translateX(-1%) translateY(-2%) rotate(-2deg);
+  }
+}
+@keyframes alarm {
+  0% {
+    opacity: 0.4;
+  }
+  33% {
+    opacity: 0.6;
+  }
+  66% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   font-family: "Montserrat_bold";
-  background-color: #ffffdc;
+  background-color: white;
 }
 
 @media all and (max-width: 577px) {
@@ -24,20 +52,46 @@ body {
 }
 
 @media all and (max-width: 577px) {
-  h4 {
-    font-size: 1em;
+  h4, .h4 {
+    font-size: 1.2em;
   }
 }
 
 @media all and (max-width: 577px) {
   body, .card-text, .nav-link, option, .form-control {
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
+}
+
+.text-primary {
+  color: #31657e !important;
+}
+
+@media all and (max-width: 577px) {
+  .btn {
+    font-size: 1em;
+  }
+}
+
+.btn-primary {
+  background-color: #31657e !important;
+  border-color: #31657e !important;
+}
+
+.btn-secondary {
+  background-color: white;
+  border-color: #31657e !important;
+  color: #31657e !important;
+  animation: wriggle 2s alternate infinite;
+}
+.btn-secondary:hover {
+  background-color: white;
 }
 
 .jumbotron {
   background-image: url(../images/vcam_2.jpg);
-  background-size: 15%;
+  background-position: 0% 20%;
+  background-size: 100%;
   color: white;
   text-shadow: black 0.1em 0.1em 0.2em;
 }
@@ -51,6 +105,14 @@ body {
 footer {
   font-family: "Montserrat";
   color: white;
+}
+
+.line-center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .column-center {

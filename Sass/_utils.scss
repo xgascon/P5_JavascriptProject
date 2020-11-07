@@ -1,1 +1,42 @@
-$bg-color-site: rgb(255,255,220);
+$bg-color-site: rgb(255,255,255);
+
+$second-color-site: rgb(49, 101, 126)!important;
+
+// Valeurs de l'animation wriggle pour secouer
+
+$wriggle-power:1%;
+$wriggle-rotation:2deg;
+
+// Animation pour faire secouer les textes
+
+@keyframes wriggle {
+    0% {
+        transform: translateX($wriggle-power) translateY($wriggle-power*-2) rotate($wriggle-rotation);
+    }
+    33% {
+        transform: translateX($wriggle-power*-1) translateY($wriggle-power*2) rotate($wriggle-rotation*-1);
+    }
+    66% {
+        transform: translateX($wriggle-power) translateY($wriggle-power*2) rotate($wriggle-rotation);
+    }
+    100% {
+        transform: translateX($wriggle-power*-1) translateY($wriggle-power*-2) rotate($wriggle-rotation*-1);
+    }
+}
+
+// Animation pour effet visuel d'opacité 
+
+@keyframes alarm {
+    0% {
+        opacity : 0.4;
+    }
+    33% {
+        opacity: 0.6;
+    }
+    66% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
